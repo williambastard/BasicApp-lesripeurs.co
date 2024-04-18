@@ -11,6 +11,16 @@ export const ENVIRONMENT = {
 				ip: 'http://ip.jsontest.com',
 			},
 		},
+		showdatetime: {
+			apiUrls: {
+				time: 'http://time.jsontest.com'
+			}
+		},
+		posts: {
+			apiUrls: {
+				new: 'https://jsonplaceholder.typicode.com/posts'
+			}
+		}
 	},
 };
 

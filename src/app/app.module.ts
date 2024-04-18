@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,28 +10,33 @@ import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-m
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ShowIpComponent } from './tools/show-ip/show-ip.component';
+import { HomeComponent } from './home/component/home.component';
+import { ToolsModule } from './tools/tools.module';
+import { PostModule } from './post/post.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent,
-		ShowIpComponent,
+		HomeComponent
+
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
-
 		MatIconModule,
 		MatToolbarModule,
 		MatButtonModule,
 		MatMenuModule,
+		HomeModule,
+		ToolsModule,
+		PostModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

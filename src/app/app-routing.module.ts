@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { ShowIpComponent } from './tools/show-ip/show-ip.component';
+import { HomeComponent } from './home/component/home.component';
+import { ShowIpComponent } from './tools/show-ip/component/show-ip.component';
+import { ShowDateTimeComponent } from './tools/showdatetime/component/showdatetime.component';
+import { PostComponent } from './post/new/component/post.component';
 
 
-const ROUTES:Routes = [
+const ROUTES: Routes = [
 	{
 		path: '',
 		component: HomeComponent,
@@ -14,6 +16,14 @@ const ROUTES:Routes = [
 		path: 'tools/show-ip',
 		component: ShowIpComponent,
 	},
+	{
+		path: 'tools/showdatetime',
+		component: ShowDateTimeComponent,
+	},
+	{
+		path: 'post/new',
+		component: PostComponent,
+	},
 ];
 
 
@@ -21,4 +31,4 @@ const ROUTES:Routes = [
 	imports: [RouterModule.forRoot(ROUTES, {})],
 	exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
