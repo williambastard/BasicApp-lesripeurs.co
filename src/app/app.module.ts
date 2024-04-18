@@ -10,17 +10,11 @@ import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-m
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/component/home.component';
-import { ToolsModule } from './tools/tools.module';
-import { PostModule } from './post/post.module';
-import { HomeModule } from './home/home.module';
 
 
 @NgModule({
 	declarations: [
-		AppComponent,
-		HomeComponent
-
+		AppComponent
 	],
 	imports: [
 		BrowserModule,
@@ -30,10 +24,7 @@ import { HomeModule } from './home/home.module';
 		MatIconModule,
 		MatToolbarModule,
 		MatButtonModule,
-		MatMenuModule,
-		HomeModule,
-		ToolsModule,
-		PostModule
+		MatMenuModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

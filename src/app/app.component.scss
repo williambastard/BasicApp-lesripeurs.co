@@ -1,3 +1,19 @@
-mat-toolbar span {
-	margin-left: 12px;
+main {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+
+	mat-toolbar span {
+		margin-left: 12px;
+	}
+	mat-icon {
+		max-width: 800px;
+		height: -webkit-fill-available;
+		width: -webkit-fill-available;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
 }

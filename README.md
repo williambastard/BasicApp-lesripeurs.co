@@ -26,7 +26,7 @@ Le formulaire doit suivre le Material Design, être responsive et avec les contr
 Le formulaire doit être posté à l'API avec le `userId` numéro `3`. Après l'envoi du formulaire, un loader doit apparaître. Et enfin, afficher un message de félicitation avec le numéro de l'article (`id`).
 
 
-### Rendre l'application "lazy loading"
+### ✅ Rendre l'application "lazy loading"
 
 Découpe l'application en 3 modules :
 
@@ -37,7 +37,7 @@ Découpe l'application en 3 modules :
 Les 2 nouveaux modules doivent profiter du `lazy loading` d'Angular.
 
 
-### Icône sur-mesure
+### ✅ Icône sur-mesure
 
 Créez une nouvelle icône au format SVG destinée à représenter le logo rond des Ripeurs, intégrer dans un écran de téléphone. Tu as un exemple de ce qui est attendu, dans le fichier : `./icon-example.jpg`.
 Puis charge-la via le service Angular `MatIconRegistry` et utilise-la via `<mat-icon>`

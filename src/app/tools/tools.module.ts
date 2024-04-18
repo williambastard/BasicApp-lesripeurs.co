@@ -4,6 +4,7 @@ import { ShowIpComponent } from './show-ip/component/show-ip.component';
 import { ShowDateTimeComponent } from './showdatetime/component/showdatetime.component';
 
 import * as fr from '@angular/common/locales/fr';
+import { ToolsRoutingModule } from './tools-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,12 @@ import * as fr from '@angular/common/locales/fr';
     ShowDateTimeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ToolsRoutingModule
+  ],
+  exports: [
+    ShowIpComponent,
+    ShowDateTimeComponent
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }]
 })
