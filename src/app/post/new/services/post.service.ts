@@ -7,16 +7,14 @@ import { PostResponse } from './post.service.type';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PostService {
 
-  constructor(public userId, public title, public body: string, private _http: HttpClient,) {
-    this.userId = userId;
-    this.title = title;
-    this.body = body;
+  constructor(private _http: HttpClient) {
   }
 
   post(post: FormGroup) {
-    const response = this._http.post<PostResponse>(ENVIRONMENT.services.posts.apiUrls.new, post.getRawValue());
+    const response = this._http.post<PostResponse>(ENVIRONMENT.services.posts.apiUrls.substitute, post.getRawValue());
     return response;
   }
 }

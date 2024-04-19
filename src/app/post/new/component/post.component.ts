@@ -4,6 +4,7 @@ import { Observable, delay, map } from 'rxjs';
 import { ENVIRONMENT } from 'src/environments/environment';
 import { PostResponse } from '../services/post.service.type';
 import { PostService } from '../services/post.service';
+import { PostData } from '../models/post.model';
 
 @Component({
   selector: 'app-post',
@@ -17,7 +18,7 @@ export class PostComponent implements OnInit {
   public postUrl: string = ENVIRONMENT.services.posts.apiUrls.new;
   public loader: string = "wait";
   public postForm!: FormGroup;
-  public articlePreview$!: Observable<PostService>;
+  public articlePreview$!: Observable<PostData>;
   constructor(private formBuilder: FormBuilder, private _postservice: PostService) {
 
   }
