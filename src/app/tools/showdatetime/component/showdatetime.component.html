@@ -1,0 +1,8 @@
+<div class="main">
+	<h5>Date et heure à Sydney :</h5>
+	<div class="date">
+		<span *ngIf="loader === true">Chargement...</span>
+		Il est {{ dateFormat | date : "HH:mm" }} et nous sommes le
+		{{ dateFormat | date : "d MMMM yyyy" }}
+	</div>
+</div>

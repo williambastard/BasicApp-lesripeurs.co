@@ -1,0 +1,50 @@
+<div class="main">
+	<div class="form-card">
+		<h2>Nouvel article</h2>
+
+		<form [formGroup]="postForm">
+			<div class="form-group" *ngIf="loader === 'wait'">
+				<label for="auteur">Auteur ID</label>
+				<input
+					id="userId"
+					type="number"
+					formControlName="userId"
+					placeholder="3"
+					readonly
+					disabled
+				/>
+			</div>
+			<div class="form-group" *ngIf="loader === 'wait'">
+				<label for="titre">Titre</label>
+				<input id="title" type="text" formControlName="title" />
+			</div>
+			<div class="form-group" *ngIf="loader === 'wait'">
+				<label for="contenu">Contenu</label>
+				<textarea id="body" formControlName="body"></textarea>
+			</div>
+			<div class="action-buttons" *ngIf="loader === 'wait'">
+				<button
+					type="submit"
+					(click)="onSubmitForm()"
+					[disabled]="postForm.invalid"
+				>
+					Envoyer !
+				</button>
+			</div>
+			<span *ngIf="loader === 'loading'"
+				>Chargement de la réponse...</span
+			>
+			<span *ngIf="loader === 'posted'">
+				Article n°{{ postResponse.id }} publié<br />
+				<a href="{{ postUrl }}/{{ postResponse.id }}"
+					>Consulter l'article</a
+				></span
+			>
+		</form>
+	</div>
+	<div class="article-card" *ngIf="loader === 'posted'">
+		<h2>{{ postResponse.title | uppercase }}</h2>
+		<p>{{ postResponse.body }}</p>
+		<span>Auteur ID: {{ postResponse.userId }}</span>
+	</div>
+</div>

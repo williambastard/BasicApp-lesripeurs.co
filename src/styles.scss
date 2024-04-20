@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+
+$theme: mat.define-dark-theme(
+	(
+		color: (
+			primary: mat.define-palette(mat.$orange-palette),
+			accent: mat.define-palette(mat.$lime-palette),
+			warn: mat.define-palette(mat.$red-palette),
+		),
+	)
+);
+
+@include mat.core-theme($theme);
+@include mat.all-component-themes($theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
